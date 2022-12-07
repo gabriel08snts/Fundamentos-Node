@@ -1,12 +1,8 @@
 const express = require('express');
-
-//Instânciando;
 const app = express(); 
 
-//Receber arquivo JSON;
 app.use(express(json));
 
-//Criando Rotas;
 app.get("/courses", (request, response) => {
     const query = request.query; //Query Params;
     console.log(query);
@@ -33,5 +29,4 @@ app.delete("/courses/:id", (request, response) => {
     return response.json(["Curso 7", "Curso 8", "Curso 4"]);
 });
 
-//Localhost:3333;
 app.listen(3333);
